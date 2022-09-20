@@ -9,6 +9,7 @@ export function Routers() {
           <Menu/>
           <Routes>
             <Route path="/" element={<Home />} />
+            
             <Route path="habitaciones" element={<Habitaciones />} />
           </Routes>
         </div>
