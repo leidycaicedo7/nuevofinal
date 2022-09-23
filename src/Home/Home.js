@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useState } from "react";
 export function Home() {
   return (
     <>
@@ -77,8 +78,12 @@ export function Home() {
               </div>
             </div>
           </div>
+         
         </div>
+
       </div>
+      
     </>
+
   );
 }

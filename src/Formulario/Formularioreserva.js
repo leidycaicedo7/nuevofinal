@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ServicioReserva } from "../services/servicioReserva.js";
+import Swal from 'sweetalert2'
 
 export function Formularioreserva() {
   const [entrada, setEntrada] = useState("");
@@ -16,6 +17,18 @@ export function Formularioreserva() {
       numeroNinos: ninos,
       numeroAdultos: adultos,
     };
+    ServicioReserva(data)
+    .then(function (respuesta) {
+      console.log(respuesta);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'respuesta.mensaje',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    })
+   
   }
 
   return (
@@ -121,5 +134,6 @@ export function Formularioreserva() {
         </div>
       </div>
     </>
+    
   );
 }
