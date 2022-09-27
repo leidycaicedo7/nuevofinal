@@ -1,5 +1,6 @@
 import { ServicioHabitacion } from "../services/ServicioHabitacion/ServicioHabitacion.js"
 import { useEffect,useState} from "react"
+
 export function Habitaciones() {
 
     //usando el usestate : (function especial para crear vaiable global dentro del 

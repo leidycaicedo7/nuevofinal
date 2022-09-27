@@ -2,19 +2,20 @@
     background-image: url('https://firebasestorage.googleapis.com/v0/b/frontcomfamalc.appspot.com/o/banner.jpg?alt=media&token=3633bd4a-15e3-4f9f-b2f2-b694d3cf18a1');
     background-position: top center;
     background-size: cover;
-    padding: 5% 20% 35% 50%;
+    padding: 5% 50% 35% 5%;
     position: relative;
+    z-index: 1;
 }
 .banner::after{
     content: '';
+    height: 100%;
+    width:100%;
     background-color: black;
     position: absolute;
     z-index: -1;
     top:0;
     left: 0;
-    opacity: 1;
+    opacity: 0.4;
 }
-.fotos{
     
-}    
 

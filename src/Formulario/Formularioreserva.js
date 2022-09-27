@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ServicioReserva } from "../services/servicioReserva.js";
+import { ServicioReserva } from "../services/ServicioReserva/servicioReserva.js";
 import Swal from 'sweetalert2'
 
 export function Formularioreserva() {
@@ -9,14 +9,16 @@ export function Formularioreserva() {
   const [adultos, setAdultos] = useState("");
 
   function EnvioFormulario(evento) {
-    evento.preventDedault();
+    evento.preventDefault();
+    
     let data = {
-      idHabitaciones: "6321efbc5a1931ff38e7c2c7",
+      idHabitacion: "6321ef745a1931ff38e7c2c3",
       fechaEntrada: entrada,
       fechaSalida: salida,
       numeroNinos: ninos,
       numeroAdultos: adultos,
     };
+    console.log(data);
     ServicioReserva(data)
     .then(function (respuesta) {
       console.log(respuesta);
@@ -33,6 +35,8 @@ export function Formularioreserva() {
 
   return (
     <>
+      <div className="container">
+
       <div className="row">
         <div className="col-12">
           <form className="" onSubmit={EnvioFormulario}>
@@ -133,6 +137,9 @@ export function Formularioreserva() {
           </form>
         </div>
       </div>
+
+      </div>
+      
     </>
     
   );
